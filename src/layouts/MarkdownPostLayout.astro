@@ -2,9 +2,7 @@
 import BaseLayout from './BaseLayout.astro';
 const { frontmatter } = Astro.props;
 ---
-<BaseLayout pageTitle={frontmatter.title}></BaseLayout>
-    <meta charset="utf-8" />
-    <h1> {frontmatter.title}</h1>
+<BaseLayout pageTitle={frontmatter.title}>
     <p>{frontmatter.pubDate.toString().slice(0,10)}</p>
     <p><em>{frontmatter.description}</em></p>
     <p>Escrito por: {frontmatter.author}</p>
